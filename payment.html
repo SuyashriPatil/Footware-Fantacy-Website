@@ -1,0 +1,64 @@
+<html>
+<head>
+ <title>Payment</title>
+ 
+</head>
+<style>
+ body{
+ 	 background-color:rgb(0,238,255); 
+
+ text-align: center; 
+ background-image: url("pr.jpg");
+ background-size: cover;
+ background-attachment: fixed;
+ }
+ h1{
+ text-align: center;
+ }
+</style>
+<body>
+ <h1>PAYMENT</h1>
+ <h5>BY Using Card</h5>
+ <input type="radio" name="U1" value="1">Debit Card
+ <br>
+ <input type="radio" name="U1" value="2">Credit Card
+ <h5>Card Details</h5><br>
+ Cardholder name = <input type="text" name="" id="1" required/><br><br>
+ Card No =<input type ="number" name="" id="2" required/><br><br>
+ Amount of Transfer = <input type="number" name="" id="3" required/><br><br>
+ password of card = <input type="number" name="" id="4" required/><br><br>
+ 
+ 
+ <input type="button" name="pay" value="pay" id="5" onclick="pay();">
+ 
+ <div class="container">
+ <h1 class="" id="timer"></h1>
+ </div>
+ <button class="" id="btn">paying</button>
+</body>
+<script>
+ function pay()
+ {
+ var time = 5;
+ var x = setInterval(function() {
+ document.getElementById("timer").innerHTML = " " + time + "Seconds";
+ time = time - 1;
+ if (time < 0) {
+ clearInterval(x);
+ document.getElementById("btn").innerHTML = "Payment Successfull"
+ document.getElementById("btn").style.backgroundColor = "Green";
+ document.getElementById("btn").style.cursor = "pointer";
+ }
+ 
+ }, 1000);
+}
+function back()
+{
+ window.location.href="home.html";
+} 
+ 
+ </script>
+<br /><br />
+<input type="button" value="BACK" onclick="back()" font size="22px">
+</body>
+</html>

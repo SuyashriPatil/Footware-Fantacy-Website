@@ -1,0 +1,61 @@
+<html>
+<head>
+ <title>order</title>
+ <script type="text/javascript">
+ function mobileValidation() {
+ var number = document.getElementById("3").value;
+ var regx = /^([0-9]{10,10})$/;
+ if (regx.test(number)) {
+ }
+ else {
+ alert("Enter valid Mobile number");
+ }
+}
+ function emailvalidation() {
+ var email = document.getElementById("2").value;
+ var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
+ if (regx.test(email)) {
+ }
+ else {
+ alert("enter valid email Id ");
+ }
+ }
+ function payment() {
+ window.location.href = "payment.html";
+ }
+ </script>
+</head>
+<style>
+ body {
+ text-align: center;
+ background-color:#0ef ;
+ text-align: center;
+ background-image:url(#0ef);
+ background-size: cover;
+ background-attachment: fixed;
+ }
+ h1 {
+ color: indigo;
+ }
+</style>
+<body>
+ <div class="container">
+ <div class="main"></div>
+ </div>
+ <form>
+ <h1>please give your details</h1><br><br>
+ Name :- <input type="text" name="" id="1" required /><br><br>
+ Email Id :- <input type="text" name="" id="2" required /><br><br>
+ mobile :- <input type="number" name="" id="3" required /><br><br>
+ Address :-<input type="text" name="" id="4" required/><br /><br />
+ <div>
+ <input type="button" name="details" value="details" onclick=" mobileValidation(); 
+emailvalidation();">
+ <input type="button" name="submit" value="submit" onclick=" payment();">
+ 
+ 
+ <br><br>
+ </div>
+ </form>
+</body>
+</html>
